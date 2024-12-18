@@ -1,0 +1,74 @@
+Name: Translations
+Id: g=178e0b9f4f8476d983bb7dbe0f4ebd98
+Type: TranslationsCategoryFolder
+Children:
+- Name: LocalizationDictionary1
+  Id: g=7cfed09ad96c5103e281eb26d3f56510
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [1,2],
+    "Body": [
+     "","en-US"
+    ]
+   }
+- Name: ImportAndExportTranslations
+  Id: g=19853ac835bb9670b476afc101b66c9f
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=a21041dda0e0c4a45a874ce869f86db9
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: CSVPath
+    Id: g=e8f5810dca5f8233ef4f4ec6c0fb6750
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+  - Class: Method
+    Name: ExportTranslations
+    Id: g=053f556067b7e74b0ba68bee763b94c5
+  - Class: Method
+    Name: ImportTranslations
+    Id: g=850a7d75b0d1b8e82019dc060eb4f8f7
+  - Name: CharacterSeparator
+    Id: g=d1f50a426d301810e4b787fce909364e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Name: WrapFields
+    Id: g=d0eaa98c089f86becca9d42d2d53d281
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: LocalizationDictionary
+    Id: g=b3521830673c152f47b281714aafdb5e
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=91a4f1dcfdd963e60333fd0e00beeebc
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/LocalizationDictionary"
+  - Name: ns=4;LibraryReference
+    Id: g=154dbc02a9110abd1ad01cfc9cff00bb
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "e7cab90d0ab7e8b5b02218e38bca9a0e",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }

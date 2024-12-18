@@ -1,0 +1,78 @@
+Name: NewHMIProject12
+Id: g=5e096d092093f4de96151cba23842524
+Type: ProjectFolder
+Children:
+- Name: Localization
+  Id: g=92e7ac79b1b533b827e0e79dd184028e
+  Type: PropertyGroup
+  Children:
+  - Name: Locales
+    Id: g=ccfabf7b1cc6044e06634a229599df9a
+    Type: BaseDataVariableType
+    DataType: LocaleId
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US"]
+  - Name: LocaleFallbackList
+    Id: g=b9ccb725e69e5ad81322edbf9b94d6a4
+    Type: BaseDataVariableType
+    DataType: LocaleId
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US"]
+- Name: Authentication
+  Id: g=854fe20b198cfeb4d7e4eda6e4b18978
+  Type: PropertyGroup
+  Children:
+  - Name: DefaultUserFolder
+    Id: g=4c6bd1ba37d58760c3fab0af1019d8c8
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/NewHMIProject12/Security/Users"
+    Children:
+    - Name: Kind
+      Id: g=4c8b030a4057ff30859b5b51a4a5c537
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+- Name: PasswordPolicy
+  Id: g=b2c0f5ee3e3f44054cd831b04f229492
+  Type: PasswordPolicy
+  Children:
+  - Name: MaximumPasswordAge
+    Id: g=aa13ed40d4f2735fee339d1622a61ac8
+    Type: BaseDataVariableType
+    DataType: UInt16
+  - Name: EnforcePasswordHistory
+    Id: g=b33e583d06159aa948625e7fb5408751
+    Type: BaseDataVariableType
+    DataType: Byte
+    Value: 1
+  - Name: MinimumPasswordAge
+    Id: g=7c5930109434e4346fdbb1a36bba5cb5
+    Type: BaseDataVariableType
+    DataType: UInt16
+  - Name: MinimumPasswordLength
+    Id: g=ca61d02c2154e06b8452934dab7b11d4
+    Type: BaseDataVariableType
+    DataType: Byte
+    Value: 8
+- Name: AlarmConfiguration
+  Id: g=865187103b5a40b75b0672725b3eec70
+  Type: PropertyGroup
+- File: UI/UI.yaml
+- File: Model/Model.yaml
+- File: Converters/Converters.yaml
+- File: Alarms/Alarms.yaml
+- File: Recipes/Recipes.yaml
+- File: Loggers/Loggers.yaml
+- File: DataStores/DataStores.yaml
+- File: Reports/Reports.yaml
+- File: 'OPC-UA/OPC-UA.yaml'
+- File: MQTT/MQTT.yaml
+- File: CommDrivers/CommDrivers.yaml
+- File: NetLogic/NetLogic.yaml
+- File: Security/Security.yaml
+- File: System/System.yaml
+- File: Translations/Translations.yaml
+- File: Retentivity/Retentivity.yaml
